@@ -20,5 +20,20 @@ then #not installed
         echo "Installing myql..SUCCESS"
     fi
 else 
-    echo "Mysql is alreday.. installed"
+    echo "Mysql is already installed"
+fi
+
+dnf list installed git
+
+if [ $? -ne 0 ]
+then
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing GIT..Failure"
+        exit 1
+    else
+    echo "Installing GIT..SUCCESS"
+else
+    echo "Git is already installed"
 fi
