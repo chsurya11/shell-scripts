@@ -33,7 +33,8 @@ then
         echo "Installing GIT..Failure"
         exit 1
     else
-    echo "Installing GIT..SUCCESS"
+        echo "Installing GIT..SUCCESS"
+    fi
 else
     echo "Git is already installed"
 fi
