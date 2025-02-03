@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 
-VARIABLE(){
+VALIDATE(){
     if [ $1 -ne 0 ]
         echo -e "$2... $R FAILURE"
         exit 1
