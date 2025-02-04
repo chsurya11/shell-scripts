@@ -27,7 +27,7 @@ then
     exit 1
 fi
 
-dnf list installed mysql0 &>>$LOG_FILE
+dnf list installed mysql &>>$LOG_FILE
 
 if [ $? -ne 0 ]
 then
@@ -35,4 +35,14 @@ then
     VALIDATE $? "Installing..MYSQL"
 else
     echo -e "MYSQL is already ..$Y installed"
+fi
+
+dnf list installed git &>>$LOG_FILE
+
+if [ $? -ne 0 ]
+then
+    dnf install git -y &>>$LOG_FILE
+    VALIDATE $? "Installing..GIT"
+else
+    echo -e "GIT is already ..$Y installed"
 fi
