@@ -15,7 +15,7 @@ VALIDATE(){
     then
         echo -e "$2... $R FAILURE $N"
     else
-        echo -e "$2... $G SUCCESS"
+        echo -e "$2... $G SUCCESS $N"
     fi
 }
 
@@ -44,5 +44,5 @@ then
     dnf install git -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing..GIT"
 else
-    echo -e "GIT is already ..$Y installed"
+    echo -e "GIT is already ..$Y installed $N"
 fi
