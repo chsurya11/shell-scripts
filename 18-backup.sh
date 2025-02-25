@@ -8,7 +8,7 @@ N="\e[0m"
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=$(3:-14) #if user is not passing no. of days .we are taking 14days as default
+DAYS=${3:-14} #if user is not passing no. of days .we are taking 14days as default
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
