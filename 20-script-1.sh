@@ -1,7 +1,8 @@
 #!/bin/bash
 
 MSG="SCRIPT1"
+GREET="Hello from SCRIPT-1"
 
 echo "Hello from: $MSG"
 
-sudo sh 21-script-2.sh
+sh 21-script-2.sh
